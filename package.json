@@ -1,0 +1,52 @@
+{
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "name": "parsedown",
+    "version": "0.0.1",
+    "description": "Parsedown is a new human-like way to parse Markdown. Parsedown.js is a JS port from the original.",
+    "homepage": "http://parsedown.org",
+    "author": {
+        "name": "Emanuil Rusev",
+        "email": "hello@erusev.com",
+        "url": "http://erusev.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/hkdobrev/parsedown.js.git"
+    },
+    "bugs": {
+        "url": "https://github.com/hkdobrev/parsedown.js/issues"
+    },
+    "contributors": [
+        {
+            "name": "Haralan Dobrev",
+            "email": "hkdobrev@gmail.com",
+            "url": "http://hkdobrev.com"
+        }
+    ],
+    "maintainers": [
+        {
+            "name": "Haralan Dobrev",
+            "email": "hkdobrev@gmail.com",
+            "url": "http://hkdobrev.com"
+        }
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "^0.4.4",
+        "grunt-contrib-clean": "~0.4.0",
+        "grunt-contrib-copy": "^0.5.0",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-cssmin": "~0.7.0",
+        "grunt-contrib-jshint": "~0.9.2",
+        "grunt-contrib-nodeunit": "~0.2.2",
+        "grunt-contrib-uglify": "~0.2.7",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-jscs-checker": "~0.2.0",
+        "grunt-git": "^0.2.11",
+        "load-grunt-config": "^0.8.0-beta.1",
+        "underscore": "^1.6.0"
+    }
+}

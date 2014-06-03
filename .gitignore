@@ -1,0 +1,17 @@
+# Compiled and minified files (ready for distribution)
+/dist/
+
+# Grunt intermediate storage
+# (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+.tmp
+
+# Dependency directories
+/node_modules/
+
+# Logs
+npm-debug.log
+
+# Test fixtures from original Parsedown
+/test/parsedown-php/
+/test/fixtures/
