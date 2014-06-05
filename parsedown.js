@@ -7,15 +7,6 @@
 
     }
 
-    if (global.exports !== undefined) {
-        if (global.module !== undefined && global.module.exports) {
-            global.exports = global.module.exports = Parsedown;
-        }
-        global.exports.Parsedown = Parsedown;
-    } else {
-        global.Parsedown = Parsedown;
-    }
-
     Parsedown.noConflict = function() {
         global.Parsedown = previousParsedown;
         return Parsedown;
@@ -26,4 +17,13 @@
         return '<' + markdown + '>';
     };
     
+    if (global.exports !== undefined) {
+        if (global.module !== undefined && global.module.exports) {
+            global.exports = global.module.exports = Parsedown;
+        }
+        global.exports.Parsedown = Parsedown;
+    } else {
+        global.Parsedown = Parsedown;
+    }
+
 }(this));
