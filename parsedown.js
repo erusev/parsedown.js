@@ -12,9 +12,11 @@
         return Parsedown;
     };
 
-    Parsedown.text = function(markdown) {
-        // Dummy
-        return '<' + markdown + '>';
+    Parsedown.prototype = {
+        text: function(markdown) {
+            // Dummy
+            return '<' + markdown + '>';
+        }
     };
     
     if (global.exports !== undefined) {
