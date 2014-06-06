@@ -4,7 +4,7 @@
     var previousParsedown = global.Parsedown;
 
     function Parsedown() {
-
+        this.breaksEnabled = false;
     }
 
     // Static methods
@@ -26,9 +26,14 @@
         line: function(markdownLine) {
             // Dummy
             return '<' + markdownLine + '>';
+        },
+        setBreaksEnabled: function(breaksEnabled) {
+            // Convert to boolean and set
+            this.breaksEnabled = !!breaksEnabled;
+            return this;
         }
     };
-    
+
     if (global.exports !== undefined) {
         if (global.module !== undefined && global.module.exports) {
             global.exports = global.module.exports = Parsedown;
