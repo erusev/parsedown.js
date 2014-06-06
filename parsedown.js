@@ -7,6 +7,24 @@
 
     }
 
+    // Static methods
+    // ==============
+
+    Parsedown.noConflict = function() {
+        global.Parsedown = previousParsedown;
+        return Parsedown;
+    };
+
+    // Instance methods
+    // ================
+
+    Parsedown.prototype = {
+        text: function(markdown) {
+            // Dummy
+            return '<' + markdown + '>';
+        }
+    };
+    
     if (global.exports !== undefined) {
         if (global.module !== undefined && global.module.exports) {
             global.exports = global.module.exports = Parsedown;
@@ -16,14 +34,4 @@
         global.Parsedown = Parsedown;
     }
 
-    Parsedown.noConflict = function() {
-        global.Parsedown = previousParsedown;
-        return Parsedown;
-    };
-
-    Parsedown.text = function(markdown) {
-        // Dummy
-        return '<' + markdown + '>';
-    };
-    
 }(this));
