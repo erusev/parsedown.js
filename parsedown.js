@@ -7,10 +7,16 @@
 
     }
 
+    // Static methods
+    // ==============
+
     Parsedown.noConflict = function() {
         global.Parsedown = previousParsedown;
         return Parsedown;
     };
+
+    // Instance methods
+    // ================
 
     Parsedown.prototype = {
         text: function(markdown) {
