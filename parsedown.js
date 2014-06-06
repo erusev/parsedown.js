@@ -22,6 +22,10 @@
         text: function(markdown) {
             // Dummy
             return '<' + markdown + '>';
+        },
+        line: function(markdownLine) {
+            // Dummy
+            return '<' + markdownLine + '>';
         }
     };
     
