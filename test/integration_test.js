@@ -9,13 +9,18 @@ exports.testIntegration = function(test) {
     test.expect(files.length / 2);
 
     files.forEach(function(file) {
-        var inputMarkdown, expected, expectedHTML, actualHTML;
+        var inputMarkdown, expected, expectedHTML, actualHTML, testName;
         if (file.indexOf('.md') >= 0) {
-            inputMarkdown = fs.readFileSync(FIXTURES_PATH + '/' + file);
-            expected = file.substring(0, file.indexOf('.md')) + '.html';
-            expectedHTML = fs.readFileSync(FIXTURES_PATH + '/' + expected);
+            inputMarkdown = fs.readFileSync(FIXTURES_PATH + '/' + file, {
+                encoding: 'utf8'
+            });
+            testName = file.substring(0, file.indexOf('.md'));
+            expected = testName + '.html';
+            expectedHTML = fs.readFileSync(FIXTURES_PATH + '/' + expected, {
+                encoding: 'utf8'
+            }).replace(/\n$/, '');
             actualHTML = parsedown.text(inputMarkdown);
-            test.equal(actualHTML, expectedHTML);
+            test.equal(actualHTML, expectedHTML, testName + ' did not match expected HTML!');
         }
     });
     test.done();
